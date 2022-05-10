@@ -39,4 +39,14 @@ class Biblioteca:
                         "Ripiano 6": libri}
         self.libri = []
 
-        
+    def inserisciLibro(self, titolo, autore):
+        add_libro = Libro(titolo,autore)
+        print("-----inserisci Libro------")
+        self.libri.append(add_libro)
+        print("Titolo: {}, Autore: {}\n").format(self.titolo, self.autore)
+
+    def contiene(self, piano, scaffale, ripiano):
+        pass
+
+
+
