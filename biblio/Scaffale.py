@@ -1,5 +1,6 @@
 from biblio.Ripiano import Ripiano
 class Scaffale:
     def __init__(self):
-        ripiano1, ripiano2, ripiano3, ripiano4, ripiano5, ripiano6 = Ripiano()
-        self.ripiani = list(ripiano1, ripiano2, ripiano3, ripiano4, ripiano5, ripiano6)
+        self.lista_ripiani = dict({})
+        for x in range(1, 7):
+            self.lista_ripiani[("SC"+str(x))] = Ripiano()
