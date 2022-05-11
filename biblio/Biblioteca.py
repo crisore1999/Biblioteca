@@ -15,4 +15,4 @@ class Biblioteca:
 
     def addLibro(self, piano, scaffale, ripiano, titolo, autore):
         add_libro = Libro(titolo, autore)
-        self.lista_piani[piano - 1].addLibro(scaffale, ripiano, add_libro)
+        self.lista_piani[piano - 1].addScaffale(scaffale, ripiano, add_libro)
