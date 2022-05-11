@@ -7,6 +7,7 @@ class Biblioteca:
     def contiene(self, piano, scaffale, ripiano):
         if ripiano[scaffale][piano] is not None:
             print("C'è almeno un libro nel ripiano {}").format(ripiano)
+            ripiano.libri.toString()
         else:
             print("Non è presente nessun libro nel ripiano {}").format(ripiano)
 
