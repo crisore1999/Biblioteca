@@ -4,4 +4,5 @@ class  Libro:
         self.autore = autore
 
     def toString(self):
-        print("Autore: {}, Titolo: {}\n").format(self.autore, self.titolo)
+
+        print("Autore: {}, Titolo: {}\n".format(self.autore, self.titolo))

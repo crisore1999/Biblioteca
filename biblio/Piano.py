@@ -2,16 +2,14 @@ from biblio.Scaffale import Scaffale
 from biblio.Libro import Libro
 class Piano:
     def __init__(self):
-        self.lista_scaffali = list()
-        for x in range(30):
-            self.lista_scaffali.append(Scaffale())
+        self.lista_scaffali = dict({})
+        for x in range(1, 31):
+            self.lista_scaffali["Piano "+str(x)] = Scaffale()
 
     def addScaffale(self, scaffale, ripiano, libro):
         self.lista_scaffali[scaffale - 1].addRipiano(ripiano, libro)
 
     def toString(self):
-        stringa = "("
+        print("----------Lista Piani-----------")
         for x in self.lista_scaffali:
-            stringa += str(x)
-        stringa += ")"
-        return stringa
+            print(x)

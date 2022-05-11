@@ -10,8 +10,6 @@ class Scaffale:
         self.lista_ripiani[ripiano-1].addLibro(libro)
 
     def toString(self):
-        stringa = "("
+        print("-----Lista Scaffali-----")
         for x in self.lista_ripiani:
-            stringa += str(x)
-        stringa += ")"
-        return stringa
+            print(x)

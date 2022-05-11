@@ -7,11 +7,11 @@ class Biblioteca:
 
     def contiene(self, piano, scaffale, ripiano):
         if ripiano.libri is not None:
-            print("C'è almeno un libro nel piano {}, scaffale {}, ripiano {}\n".format(piano.toString(), scaffale.toString(), ripiano.toString()))
-
+            #print("C'è almeno un libro nel piano {}, scaffale {}, ripiano {}\n".format(piano.toString(), scaffale.toString(), ripiano.toString()))
+            print("C'è almeno un libro nel ripiano")
         else:
-            print("Non è presente nessun libro nel piano {}, scaffale {}, ripiano {}\n".format(piano.toString(), scaffale.toString(), ripiano.toString()))
-
+            #print("Non è presente nessun libro nel piano {}, scaffale {}, ripiano {}\n".format(piano.toString(), scaffale.toString(), ripiano.toString()))
+            print("Non c'è nessuno libro nel ripiano")
 
     def addLibro(self, piano, scaffale, ripiano, titolo, autore):
         add_libro = Libro(titolo, autore)
