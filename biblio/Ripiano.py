@@ -3,13 +3,13 @@ class Ripiano:
     def __init__(self):
         self.libri = dict({})
         for x in range(1, 11):
-            self.libri["Ripiano "+str(x)] = Libro("", "")
+            self.libri["Libro"+str(x)] = Libro("", "")
 
     def addLibro(self, nomeRipiano, titolo, autore):
         add_libro = Libro(titolo, autore)
-        self.libri.update({"Ripiano": nomeRipiano, "Libro": add_libro})
+        self.libri[nomeRipiano] = add_libro
 
     def toString(self):
-        print("-----Lista Ripiani-----")
+        print("-----Lista Libri-----")
         for x in self.libri:
-            print(x)
+            print("Ripiano: {}, Titolo: {}, Autore: {}\n".format(self.libri[x], self.libri[x].titolo, self.libri[x].autore))
