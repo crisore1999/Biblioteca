@@ -11,5 +11,13 @@ class Piano:
 
     def toString(self):
         print("----------Lista Scaffali-----------")
-        for x in self.lista_scaffali:
-            print(x)
+        for scaffali in self.lista_scaffali:
+            print(scaffali, ":(\n", end=" ")
+            for ripiani in self.lista_scaffali[scaffali].lista_ripiani:
+                print('\t', ripiani, ":(", end="\t\n")
+                for libri in self.lista_scaffali[scaffali].lista_ripiani[ripiani].libri:
+                    print('\t\t', libri, ", ", end="\t\n")
+                print("\t\t)")
+            print("\t)")
+
+

@@ -12,4 +12,4 @@ class Ripiano:
     def toString(self):
         print("-----Lista Libri-----")
         for x in self.libri:
-            print("Ripiano: {}, Titolo: {}, Autore: {}\n".format(self.libri[x], self.libri[x].titolo, self.libri[x].autore))
+            print(" Titolo: {}, Autore: {}\n".format(self.libri[x].titolo, self.libri[x].autore))

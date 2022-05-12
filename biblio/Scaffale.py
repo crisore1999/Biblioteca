@@ -11,5 +11,8 @@ class Scaffale:
 
     def toString(self):
         print("-----Lista Ripiano-----")
-        for x in self.lista_ripiani:
-            print(x)
+        for ripiani in self.lista_ripiani:
+            print(ripiani, ":(\n", end=" ")
+            for libri in self.lista_ripiani[ripiani].libri:
+                print('\t', libri, ", ", end="\t\n")
+            print("\t)")

@@ -1,9 +1,11 @@
 from biblio.Piano import Piano
 from biblio.Libro import Libro
+from biblio.Scaffale import Scaffale
 class Biblioteca:
     def __init__(self):
-        piano1, piano2, piano3 = Piano(), Piano(), Piano()
-        self.lista_piani = (piano1, piano2, piano3)
+        self.lista_piani = dict({})
+        for x in range(1, 4):
+            self.lista_piani["Piano"+str(x)] = Piano()
 
     def contiene(self, piano, scaffale, ripiano):
         if ripiano.libri is not None:
@@ -19,5 +21,14 @@ class Biblioteca:
 
     def toString(self):
         print("----------Lista Piani-----------")
-        for x in range(1, len(self.lista_piani)+1):
-            print("Piano", x)
+        for piani in self.lista_piani:
+            print(piani, ":(\n", end=' ')
+            for scaffali in self.lista_piani[piani].lista_scaffali:
+                print('\t', scaffali, ':(', end='\t\n')
+                for ripiani in self.lista_piani[piani].lista_scaffali[scaffali].lista_ripiani:
+                    print('\t\t', ripiani, ':(', end='\t\n')
+                    for libri in self.lista_piani[piani].lista_scaffali[scaffali].lista_ripiani[ripiani].libri:
+                        print('\t\t\t', libri, ', ', end='\t\n')
+                    print('\t\t\t)')
+                print('\t\t)')
+            print('\t)')
